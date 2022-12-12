@@ -42,10 +42,10 @@ export const appointmentApi = createApi({
       invalidatesTags: ["Appointment"],
     }),
     updateStatusAppointment: builder.mutation({
-      query: (data) => ({
-        url: `api/appointments/${data.id}/status`,
+      query: ({ id, confirm }) => ({
+        url: `api/appointments/${id}/confirm`,
         method: "PATCH",
-        body: { data },
+        body: { confirm },
       }),
       invalidatesTags: ["Appointment"],
     }),

@@ -8,13 +8,25 @@ export const Item = styled.li`
   transform: scale(0.9);
   border: none;
   border-radius: 12px;
+
   &:hover {
     transform: scale(1);
   }
+  background-color: ${(p) => {
+    if (p.confirm === true) {
+      return "grey";
+    }
+  }};
 `;
 
 export const Title = styled.h2`
   margin: 0px;
   margin-bottom: 10px;
   text-align: center;
+`;
+
+export const Text = styled.p`
+  display: flex;
+  align-items: center;
+  gap: 4px;
 `;

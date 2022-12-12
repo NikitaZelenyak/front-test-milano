@@ -6,6 +6,7 @@ import { TransitionsModal } from "components/Modal/Modal";
 import { PickDate } from "./PickDate/PickDate";
 import toast, { Toaster } from "react-hot-toast";
 import { AddForm } from "./Form/AddForm";
+
 export const Appointments = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);

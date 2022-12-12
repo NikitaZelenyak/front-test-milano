@@ -10,7 +10,6 @@ export const AddButton = () => {
         left: "50%",
         transform: "translate(-50%, -50%)",
       }}
-      //   onClick={handleOpen}
     >
       <AddIcon style={{ color: "orange" }} />
     </Button>

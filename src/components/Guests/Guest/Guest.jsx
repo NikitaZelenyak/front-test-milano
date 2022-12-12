@@ -1,4 +1,7 @@
 import { Item } from "commonStyle/common.styled";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import EmailIcon from "@mui/icons-material/Email";
+import { Text } from "commonStyle/common.styled";
 export const Guest = ({ guest }) => {
   const { email, firstName, lastName, phone } = guest;
   return (
@@ -6,8 +9,14 @@ export const Guest = ({ guest }) => {
       <h2>
         {firstName} {lastName}
       </h2>
-      <p>{phone}</p>
-      <p>{email}</p>
+      <Text>
+        <LocalPhoneIcon fontSize="small"></LocalPhoneIcon>
+        {phone}
+      </Text>
+      <Text>
+        <EmailIcon fontSize="small"></EmailIcon>
+        {email}
+      </Text>
     </Item>
   );
 };

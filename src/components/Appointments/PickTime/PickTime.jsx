@@ -1,7 +1,6 @@
 import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
-import dayjs from "dayjs";
 
 export const PickTime = ({ label, setTime }) => {
   const handleChange = (e) => {
@@ -22,20 +21,10 @@ export const PickTime = ({ label, setTime }) => {
           shrink: true,
         }}
         inputProps={{
-          step: 300, // 5 min
+          step: 300, 
         }}
         sx={{ width: 150 }}
       />
-      {/* <TextField
-        id="datetime-local"
-        label="Next appointment"
-        type="datetime-local"
-        defaultValue="2017-05-24T10:30"
-        sx={{ width: 250 }}
-        InputLabelProps={{
-          shrink: true,
-        }}
-      /> */}
     </Stack>
   );
 };

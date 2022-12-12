@@ -9,7 +9,6 @@ import { PickValue } from "../PickValue/PickValue";
 import { useGetGuestsQuery } from "redux/Guests/Guests";
 import { useGetStaffsQuery } from "redux/Staffs/Staffs";
 import { useGetServicesQuery } from "redux/Services/Services";
-
 export const AddForm = ({ handleClose }) => {
   const { data: guests } = useGetGuestsQuery();
   const { data: staffs } = useGetStaffsQuery();
@@ -66,7 +65,9 @@ export const AddForm = ({ handleClose }) => {
     try {
       addAppointment(appointment);
       handleClose();
-    } catch (error) {}
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (
